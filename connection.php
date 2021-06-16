@@ -1,7 +1,7 @@
 <?php
 
 $username="root";
-$password=""; //password needed in production-jd
+$password="Joy@1234"; //password needed in production-jd
 $server='localhost';
 $db='events';             
 
