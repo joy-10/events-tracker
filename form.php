@@ -10,19 +10,22 @@
 <body>
   <div class="container col-lg-6 offset-lg-3 mt-4 ml-2">
 
-    <form clas='col-lg-6 offset-lg-3'>
+    <form action="submit.php" method="POST" clas='col-lg-6 offset-lg-3'>
 
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <label for="event" class="form-label">Enter event</label>
+          <input type="text" class="form-control" id="event" name="event">
         </div>
 
         <input style="margin-bottom: 3%;"
-        class="btn btn-primary" type="submit">
+        class="btn btn-primary" type="submit" name="submit" value="Submit">
+
+        <input style="margin-bottom: 3%;"
+        class="btn btn-primary" type="submit" name="home" value="Home">
 
       
     </form>
   </div>
 </body>
 </html>
+

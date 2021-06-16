@@ -8,71 +8,26 @@
   <title>Document</title>
 </head>
 <body>
+<?php 
+  session_start();
+  ?>
   <div class="row">
+    <?php 
+    foreach($_SESSION['cdata'] as $i)
+    {
+    ?>
     <div class="mb-3 col-md-4 col-lg-3 col-sm-12">
       <div style="width: 100%;" class='card h-100'>  
       <div class='card-body d-flex flex-column' bg='light'>
-        <h5 class='card-title mt-auto'>heading</h5>
+        <h5 class='card-title mt-auto'>EVENT</h5>
         <p class='card-text mt-auto'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque velit alias! Optio ipsa autem suscipit architecto consectetur, laboriosam libero ut ex fugiat sapiente impedit quibusdam debitis quo provident ea.
+          <?php echo $i[0] ; ?>
         </p>
-        <a href="#" style="margin-bottom: 3%;" class="btn btn-primary">Go somewhere</a>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="./del.php?id=<?php echo $i[1] ;?>" class="btn btn-danger">Delete</a>
       </div>
     </div>
     </div>
-  
-    <div class="mb-3 col-md-4 col-lg-3 col-sm-12">
-      <div style="width: 100%;" class='card h-100'>  
-      <div class='card-body d-flex flex-column' bg='light'>
-        <h5 class='card-title mt-auto'>heading</h5>
-        <p class='card-text mt-auto'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque velit alias! Optio ipsa autem suscipit architecto consectetur, laboriosam libero ut ex fugiat sapiente impedit quibusdam debitis quo provident ea.
-        </p>
-        <a href="#" style="margin-bottom: 3%;" class="btn btn-primary">Go somewhere</a>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    </div>
-  
-    <div class="mb-3 col-md-4 col-lg-3 col-sm-12">
-      <div style="width: 100%;" class='card h-100'>  
-      <div class='card-body d-flex flex-column' bg='light'>
-        <h5 class='card-title mt-auto'>heading</h5>
-        <p class='card-text mt-auto'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque velit alias! Optio ipsa autem suscipit architecto consectetur, laboriosam libero ut ex fugiat sapiente impedit quibusdam debitis quo provident ea.
-        </p>
-        <a href="#" style="margin-bottom: 3%;" class="btn btn-primary">Go somewhere</a>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    </div>
-  
-    <div class="mb-3 col-md-4 col-lg-3 col-sm-12">
-      <div style="width: 100%;" class='card h-100'>  
-      <div class='card-body d-flex flex-column' bg='light'>
-        <h5 class='card-title mt-auto'>heading</h5>
-        <p class='card-text mt-auto'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque velit alias! Optio ipsa autem suscipit architecto consectetur, laboriosam libero ut ex fugiat sapiente impedit quibusdam debitis quo provident ea.
-        </p>
-        <a href="#" style="margin-bottom: 3%;" class="btn btn-primary">Go somewhere</a>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    </div>
-  
-    <div class="col-md-4 col-lg-3 col-sm-12">
-      <div style="width: 100%;" class='card h-100'>  
-      <div class='card-body d-flex flex-column' bg='light'>
-        <h5 class='card-title mt-auto'>heading</h5>
-        <p class='card-text mt-auto'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor cumque velit alias! Optio ipsa autem suscipit architecto consectetur, laboriosam libero ut ex fugiat sapiente impedit quibusdam debitis quo provident ea.
-        </p>
-        <a href="#" style="margin-bottom: 3%;" class="btn btn-primary">Go somewhere</a>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    </div>
+    <?php } ?>
   </div>
 </body>
 </html>
